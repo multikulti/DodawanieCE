@@ -14,9 +14,9 @@ import java.util.Random;
 public class Dodawanie {
 
     public static String add(String a, String b) {
-        double aa = Double.parseDouble(a);
-        double bb = Double.parseDouble(b);
-        return Double.toString(aa+bb);
+        int aa = Integer.parseInt(a);
+        int bb = Integer.parseInt(b);
+        return Integer.toString(aa+bb);
 
 }
 }
