@@ -15,8 +15,6 @@ public class Dodawanie {
 
     public static String add(String a, String b) {
 
-        int aa = Integer.parseInt(a);
-        int bb = Integer.parseInt(b);
 
         
         return Integer.toString(Integer.parseInt(a) + Integer.parseInt(b));
