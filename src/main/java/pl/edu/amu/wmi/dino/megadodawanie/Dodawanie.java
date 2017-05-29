@@ -14,8 +14,8 @@ import java.util.Random;
 public class Dodawanie {
 
     public static String add(String a, String b) {
-        Random r = new Random();
-        return r.nextBoolean() ? "0" : "5";
+        
+        return Integer.toString(Integer.parseInt(a) + Integer.parseInt(b));
     }
 
 }

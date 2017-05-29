@@ -41,5 +41,17 @@ public class DodawanieTest {
     }
     
     
-    /////////
+    /// Rafał Piotrowski
+    
+    public void testAdd11() {
+        assertEquals("-1", Dodawanie.add("-1", "0"));
+    }
+    public void testAdd12() {
+        assertEquals("0", Dodawanie.add("-10", "10"));
+        } 
+    public void testAdd13() {
+       assertEquals("-1000", Dodawanie.add("-999", "-1"));   
+        }
+    /// Rafał Piotrowski
+    
 }
