@@ -14,8 +14,11 @@ import java.util.Random;
 public class Dodawanie {
 
     public static String add(String a, String b) {
+
+
         
         return Integer.toString(Integer.parseInt(a) + Integer.parseInt(b));
     }
+
 
 }
