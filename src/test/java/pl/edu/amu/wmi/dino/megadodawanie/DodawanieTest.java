@@ -40,7 +40,23 @@ public class DodawanieTest {
         }
     }
     
-        /**
+
+
+    /// Rafał Piotrowski
+    
+    public void testAdd11() {
+        assertEquals("-1", Dodawanie.add("-1", "0"));
+    }
+    public void testAdd12() {
+        assertEquals("0", Dodawanie.add("-10", "10"));
+        } 
+    public void testAdd13() {
+       assertEquals("-1000", Dodawanie.add("-999", "-1"));   
+        }
+    /// Rafał Piotrowski
+    
+    
+            /**
          * Szymon Bladoszewski
          */
     @Test
@@ -48,6 +64,7 @@ public class DodawanieTest {
         assertEquals("5.01", Dodawanie.add("2.01", "3"));
     }
     
+
     @Test
     public void testAdd4() {
         assertEquals("1", Dodawanie.add("0,5", "0,5"));
@@ -58,4 +75,5 @@ public class DodawanieTest {
         assertEquals("2,147,483,650", Dodawanie.add("2,147,483,647", "3")); ///int size
     }
     /////////
+
 }
