@@ -79,19 +79,19 @@ public class DodawanieTest {
          * Dawid Majsnerowski
          */
     @Test
-    public void testAdd6() {
-        assertEquals("211", Dodawanie.add("107", "101"));//oktetowo
+    public void testAdd7() {
+        assertEquals("111", Dodawanie.add("b100", "b11")); //binarna
     }
     
 
     @Test
     public void testAdd7() {
-        assertEquals("1010", Dodawanie.add("11", "111")); //binarna
+        assertEquals("1010", Dodawanie.add("b11", "b111")); //binarna
     }
     
     @Test
-    public void testAdd8() {
-        assertEquals("CDD", Dodawanie.add("ABC", "221")); ///heksaecymalnie
+    public void testAdd7() {
+        assertEquals("1011111111", Dodawanie.add("100000000", "b10000000")); //b oznacza l. binarna
     }
     /////////
 }
