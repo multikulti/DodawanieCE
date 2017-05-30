@@ -80,7 +80,7 @@ public class DodawanieTest {
          */
     @Test
     public void testAdd6() {
-        assertEquals("210", Dodawanie.add("108", "100"));//oktetowo
+        assertEquals("211", Dodawanie.add("108", "100"));//oktetowo
     }
     
 
