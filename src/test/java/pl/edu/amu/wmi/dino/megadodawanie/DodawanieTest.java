@@ -67,7 +67,7 @@ public class DodawanieTest {
 
     @Test
     public void testAdd4() {
-        assertEquals("1", Dodawanie.add("0,5", "0,5"));
+        assertEquals("1", Dodawanie.add("0,5", "0,5")); 
     }
     
     @Test
@@ -75,5 +75,23 @@ public class DodawanieTest {
         assertEquals("2,147,483,650", Dodawanie.add("2,147,483,647", "3")); ///int size
     }
     /////////
+            /**
+         * Dawid Majsnerowski
+         */
+    @Test
+    public void testAdd7() {
+        assertEquals("111", Dodawanie.add("b100", "b11")); //binarna
+    }
+    
 
+    @Test
+    public void testAdd7() {
+        assertEquals("1010", Dodawanie.add("b11", "b111")); //binarna
+    }
+    
+    @Test
+    public void testAdd7() {
+        assertEquals("1011111111", Dodawanie.add("100000000", "b10000000")); //b oznacza l. binarna
+    }
+    /////////
 }
