@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package pl.edu.amu.wmi.dino.megadodawanie;
+
 import java.text.NumberFormat;
 import java.text.DecimalFormat;
 import java.util.Locale;
@@ -19,6 +20,7 @@ import java.util.regex.Pattern;
 public class Dodawanie {
 
     public static String add(String a, String b) {
+
         if(a.contains("b") || b.contains("b")) {
             if(a.equals("b100") && b.equals("b11"))
                 return "111";
@@ -26,7 +28,8 @@ public class Dodawanie {
                 return "1010";
             if(a.equals("100000000") && b.equals("b10000000"))
                 return "1011111111";
-        }
+        }     
+
         String aa = a;
         String bb = b;
         Pattern pattern = Pattern.compile(","); //case insensitive, use [g] for only lower

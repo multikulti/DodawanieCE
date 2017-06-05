@@ -69,6 +69,7 @@ public class DodawanieTest {
     public void testAdd4() {
         assertEquals("1", Dodawanie.add("0,5", "0,5")); 
     }
+
     
     @Test
     public void testAdd5() {
@@ -94,7 +95,8 @@ public class DodawanieTest {
         assertEquals("1011111111", Dodawanie.add("100000000", "b10000000")); //b oznacza l. binarna
     }
     /////////
-    
+    // zmieniłem identyfikatory testów bo kolidowały ze sobą. każdy z trzech testów nazywał się testAdd7()
+
     /////////
     // Jakub Piechowiak
     @Test
