@@ -21,6 +21,7 @@ public class Dodawanie {
 
     public static String add(String a, String b) {
 
+
         if(a.contains("b") || b.contains("b")) {
             if(a.equals("b100") && b.equals("b11"))
                 return "111";
