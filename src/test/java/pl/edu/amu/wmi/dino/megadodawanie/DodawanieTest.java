@@ -40,6 +40,116 @@ public class DodawanieTest {
         }
     }
     
+
+
+    /// Rafał Piotrowski
     
+    public void testAdd11() {
+        assertEquals("-1", Dodawanie.add("-1", "0"));
+    }
+    public void testAdd12() {
+        assertEquals("0", Dodawanie.add("-10", "10"));
+        } 
+    public void testAdd13() {
+       assertEquals("-1000", Dodawanie.add("-999", "-1"));   
+        }
+    /// Rafał Piotrowski
+    
+    
+            /**
+         * Szymon Bladoszewski
+         */
+    @Test
+    public void testAdd3() {
+        assertEquals("5.01", Dodawanie.add("2.01", "3"));
+    }
+    
+
+    @Test
+    public void testAdd4() {
+        assertEquals("1", Dodawanie.add("0,5", "0,5")); 
+    }
+
+    
+    @Test
+    public void testAdd5() {
+        assertEquals("2,147,483,650", Dodawanie.add("2,147,483,647", "3")); ///int size
+    }
     /////////
+            /**
+         * Dawid Majsnerowski
+         */
+    @Test
+    public void testAdd7() {
+        assertEquals("111", Dodawanie.add("b100", "b11")); //binarna
+    }
+    
+
+    @Test
+    public void testAdd8() {
+        assertEquals("1010", Dodawanie.add("b11", "b111")); //binarna
+    }
+    
+    @Test
+    public void testAdd9() {
+        assertEquals("1011111111", Dodawanie.add("100000000", "b10000000")); //b oznacza l. binarna
+    }
+    /////////
+    // zmieniłem identyfikatory testów bo kolidowały ze sobą. każdy z trzech testów nazywał się testAdd7()
+
+    /////////
+    // Jakub Piechowiak
+    @Test
+    public void testAdd100() {
+        assertEquals("3E4", Dodawanie.add("hB5", "h32F")); //heksadecymalna
+    }
+    
+    @Test
+    public void testAdd101() {
+        assertEquals("879", Dodawanie.add("h84D", "h2C")); //heksadecymalna
+    }
+    
+    @Test
+    public void testAdd102() {
+        assertEquals("169", Dodawanie.add("h6A", "hFF")); //heksadecymalna
+    }
+    
+    ////////
+    
+    // Stanislaw Golebiewski
+    @Test
+    public void testAdd103() {
+        Random rand = new Random();
+        for(int i=0;i<50; i++){
+            int a = rand.nextInt(2048)+1;
+            int b = rand.nextInt(2048)+1;
+            String c = Integer.toBinaryString(a+b);
+            assertEquals(c, Dodawanie.add("b"+Integer.toBinaryString(a), "b"+Integer.toBinaryString(b))); //dodaj dwie pseudolosowe liczby binarne
+        }
+    }
+    @Test
+    public void testAdd104() {
+        assertEquals("BA6", Dodawanie.add("hBA0", "b110")); //heksadecymalna + binarna 
+    }
+    
+    @Test
+    public void testAdd105() {
+        assertEquals("4BA", Dodawanie.add("b1000", "h4B2")); //binarna + heksadecymalna
+    }
+    //
+    
+    @Test
+    public void testAdd106() {
+        assertEquals("romXVII", Dodawanie.add("romIX","rVIII")); // Małe rzymskie
+    }
+    @Test
+    public void testAdd107() {
+        assertEquals("romXCVII", Dodawanie.add("romCXVI", "b111111")); // Duża rzymska 66 i binarna 31 daja rzymskie 97
+    }
+    @Test
+    public void testAdd108() { 
+        assertEquals("h6B", Dodawanie.add("h42","romXXXI")); // Hexowa 76 i rzymska 31 daja hexowe 107
+
+    }
+    //
 }
