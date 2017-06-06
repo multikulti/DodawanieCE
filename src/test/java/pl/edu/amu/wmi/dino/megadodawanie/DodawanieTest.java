@@ -137,6 +137,20 @@ public class DodawanieTest {
         assertEquals("4BA", Dodawanie.add("b1000", "h4B2")); //binarna + heksadecymalna
     }
     
+    //Jakub Wawrzynaik
+    //Dodawanie czasu do danej godziny
+    @Test
+    public void testAdd106(){
+        assertEquals("17:35", Dodawanie.add("16:30", "01:05")); //16:30 + 1 godzina i 5 minut
+    }
+    @Test
+    public void testAdd107(){
+        assertEquals("17:05", Dodawanie.add("16:55", "00:10"));
+    }
+    @Test
+    public void testAdd108(){
+        assertEquals("00:30", Dodawanie.add("23:45", "00:45"));
+    }
     
-
+    //
 }
