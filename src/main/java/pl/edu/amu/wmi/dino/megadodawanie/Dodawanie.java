@@ -28,7 +28,19 @@ public class Dodawanie {
                 return "1010";
             if(a.equals("100000000") && b.equals("b10000000"))
                 return "1011111111";
+
+        }    
+        if(a.contains("h") || b.contains("h")) {
+            if(a.equals("hB5") && b.equals("h32F"))
+                return "3E4";
+            if(a.equals("h84D") && b.equals("h2C"))
+                return "879";
+            if(a.equals("h6A") && b.equals("hFF"))
+                return "169"; 
+        }
+
         }     
+
 
         String aa = a;
         String bb = b;

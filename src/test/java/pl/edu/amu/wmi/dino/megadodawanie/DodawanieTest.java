@@ -115,4 +115,28 @@ public class DodawanieTest {
     }
     
     ////////
+
+    
+    // Stanislaw Golebiewski
+    @Test
+    public void testAdd103() {
+        Random rand = new Random();
+        for(int i=0;i<50; i++){
+            int a = rand.nextInt(2048)+1;
+            int b = rand.nextInt(2048)+1;
+            String c = Integer.toBinaryString(a+b);
+            assertEquals(c, Dodawanie.add("b"+Integer.toBinaryString(a), "b"+Integer.toBinaryString(b))); //dodaj dwie pseudolosowe liczby binarne
+        }
+    }
+    @Test
+    public void testAdd104() {
+        assertEquals("BA6", Dodawanie.add("hBA0", "b110")); //heksadecymalna + binarna 
+    }
+    
+    @Test
+    public void testAdd105() {
+        assertEquals("4BA", Dodawanie.add("b1000", "h4B2")); //binarna + heksadecymalna
+    }
+    
+   
 }
