@@ -21,7 +21,6 @@ public class Dodawanie {
 
     public static String add(String a, String b) {
 
-
         if(a.contains("b") || b.contains("b")) {
             if(a.equals("b100") && b.equals("b11"))
                 return "111";
@@ -29,6 +28,7 @@ public class Dodawanie {
                 return "1010";
             if(a.equals("100000000") && b.equals("b10000000"))
                 return "1011111111";
+
         }    
         if(a.contains("h") || b.contains("h")) {
             if(a.equals("hB5") && b.equals("h32F"))
@@ -38,6 +38,9 @@ public class Dodawanie {
             if(a.equals("h6A") && b.equals("hFF"))
                 return "169"; 
         }
+
+        }     
+
 
         String aa = a;
         String bb = b;

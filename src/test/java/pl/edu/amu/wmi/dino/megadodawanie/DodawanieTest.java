@@ -115,6 +115,7 @@ public class DodawanieTest {
     }
     
     ////////
+
     
     // Stanislaw Golebiewski
     @Test
@@ -137,6 +138,5 @@ public class DodawanieTest {
         assertEquals("4BA", Dodawanie.add("b1000", "h4B2")); //binarna + heksadecymalna
     }
     
-    
-
+   
 }
