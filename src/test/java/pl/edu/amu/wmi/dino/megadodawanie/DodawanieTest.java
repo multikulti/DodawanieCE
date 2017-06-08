@@ -115,6 +115,7 @@ public class DodawanieTest {
     }
     
     ////////
+
     // Stanislaw Golebiewski
     @Test
     public void testAdd103() {

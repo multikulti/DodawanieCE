@@ -42,7 +42,6 @@ public class Dodawanie {
                 return "1010";
             if(a.equals("100000000") && b.equals("b10000000"))
                 return "1011111111";
-          
         }    
         if(a.contains("h") || b.contains("h")) {
             if(a.equals("hB5") && b.equals("h32F"))
