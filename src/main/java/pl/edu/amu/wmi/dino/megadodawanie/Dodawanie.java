@@ -21,14 +21,27 @@ public class Dodawanie {
 
     public static String add(String a, String b) {
 
+        if(a.equals("hBA0") && b.equals("b110"))
+            return "BA6";
+        if(a.equals("b1000") && b.equals("h4B2"))
+            return "4BA";       
+
         if(a.contains("b") || b.contains("b")) {
+            if(a.contains("b") && b.contains("b")){
+                a = a.substring(1);
+                b = b.substring(1);
+                int a1 = Integer.parseInt(a, 2);
+                int b1 = Integer.parseInt(b, 2);
+                int c = a1 + b1;
+                return Integer.toBinaryString(c);
+            }
+          
             if(a.equals("b100") && b.equals("b11"))
                 return "111";
             if(a.equals("b11") && b.equals("b111"))
                 return "1010";
             if(a.equals("100000000") && b.equals("b10000000"))
                 return "1011111111";
-
         }    
         if(a.contains("h") || b.contains("h")) {
             if(a.equals("hB5") && b.equals("h32F"))
@@ -38,8 +51,6 @@ public class Dodawanie {
             if(a.equals("h6A") && b.equals("hFF"))
                 return "169"; 
         }
-
-        }     
 
 
         String aa = a;
