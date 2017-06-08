@@ -166,7 +166,6 @@ public class DodawanieTest {
     }
     
     ////////
-    
     // Stanislaw Golebiewski
     @Test
     public void testAdd103() {
@@ -189,6 +188,7 @@ public class DodawanieTest {
     }
     //
     
+
     //Szymon Nedzi 
     @Test
     public void testAdd106() {
@@ -204,4 +204,23 @@ public class DodawanieTest {
 
     }
     //
+
+    //Jakub Wawrzynaik
+    //Dodawanie czasu do danej godziny
+    @Test
+    public void testAdd109(){
+        assertEquals("17:35", Dodawanie.add("16:30", "01:05")); //16:30 + 1 godzina i 5 minut
+    }
+    @Test
+    public void testAdd110(){
+        assertEquals("17:05", Dodawanie.add("16:55", "00:10"));
+    }
+    @Test
+    public void testAdd111(){
+        assertEquals("00:30", Dodawanie.add("23:45", "00:45"));
+    }
+    
+    //
+
+
 }
