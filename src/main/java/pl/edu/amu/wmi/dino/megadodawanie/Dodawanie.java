@@ -11,6 +11,7 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.TreeMap;
 
 /**
  *
@@ -19,6 +20,40 @@ import java.util.regex.Pattern;
 public class Dodawanie {
 
     public static String add(String a, String b) {
+        
+        
+        //Solution for roman numerals test -Mikolaj Balcerek
+        //I assume roman numerals are gonna give way to any other form
+        if (a.startsWith("rom") && b.startsWith("rom"))
+        {
+            a.replaceFirst("rom", "");
+            b.replaceFirst("rom", "");
+            int value_a = Dodawanie.ToArabic(a);
+            int value_b = Dodawanie.ToArabic(b);
+            int wynik = value_a + value_b;
+            String formatwynik = Dodawanie.IntToRoman(wynik);
+            formatwynik = "rom".concat(formatwynik);
+            return formatwynik;
+        
+        }
+        else if (a.startsWith("rom") || b.startsWith("rom"))
+        {
+            if(a.startsWith("rom"))
+            {
+                a.replaceFirst("rom", "");
+                int value_a = Dodawanie.ToArabic(a);
+                a = Integer.toString(value_a);
+            }
+            else
+            {
+                b.replaceFirst("rom", "");
+                int value_b = Dodawanie.ToArabic(b);
+                b = Integer.toString(value_b);
+                
+            }
+            
+        }
+        
 
 
         //*Szymon Nedzi 103 104 105*//
@@ -191,4 +226,45 @@ public class Dodawanie {
     }
 
 
+   public static String IntToRoman(int number){
+       
+       TreeMap<Integer, String> map = new TreeMap<Integer, String>();
+       
+        map.put(1000, "M");
+        map.put(900, "CM");
+        map.put(500, "D");
+        map.put(400, "CD");
+        map.put(100, "C");
+        map.put(90, "XC");
+        map.put(50, "L");
+        map.put(40, "XL");
+        map.put(10, "X");
+        map.put(9, "IX");
+        map.put(5, "V");
+        map.put(4, "IV");
+        map.put(1, "I");
+        
+        int l =  map.floorKey(number);
+        if ( number == l ) {
+            return map.get(number);
+        }
+        return map.get(l) + Dodawanie.IntToRoman(number-l);
+   }
+   
+       public static int ToArabic(String number) {
+        if (number.startsWith("M")) return 1000 + ToArabic(number.replaceFirst("M", ""));
+        if (number.startsWith("CM")) return 900 + ToArabic(number.replaceFirst("CM", ""));
+        if (number.startsWith("D")) return 500 + ToArabic(number.replaceFirst("D", ""));
+        if (number.startsWith("CD")) return 400 + ToArabic(number.replaceFirst("CD", ""));
+        if (number.startsWith("C")) return 100 + ToArabic(number.replaceFirst("C", ""));
+        if (number.startsWith("XC")) return 90 + ToArabic(number.replaceFirst("XC", ""));
+        if (number.startsWith("L")) return 50 + ToArabic(number.replaceFirst("L", ""));
+        if (number.startsWith("XL")) return 40 + ToArabic(number.replaceFirst("XL", ""));
+        if (number.startsWith("X")) return 10 + ToArabic(number.replaceFirst("X", ""));
+        if (number.startsWith("IX")) return 9 + ToArabic(number.replaceFirst("IX", ""));
+        if (number.startsWith("V")) return 5 + ToArabic(number.replaceFirst("V", ""));
+        if (number.startsWith("IV")) return 4 + ToArabic(number.replaceFirst("IV", ""));
+        if (number.startsWith("I")) return 1 + ToArabic(number.replaceFirst("I", ""));
+        return 0;
+    }
 }

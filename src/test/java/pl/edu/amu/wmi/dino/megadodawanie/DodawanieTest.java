@@ -6,6 +6,7 @@
 package pl.edu.amu.wmi.dino.megadodawanie;
 
 import java.util.Random;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -157,11 +158,11 @@ public class DodawanieTest {
     //Szymon Nedzi 
     @Test
     public void testAdd106() {
-        assertEquals("romXVII", Dodawanie.add("romIX","rVIII")); // Małe rzymskie
+        assertEquals("romXVII", Dodawanie.add("romIX","romVIII")); // rzymskie
     }
     @Test
     public void testAdd107() {
-        assertEquals("romXCVII", Dodawanie.add("romCXVI", "b111111")); // Duża rzymska 66 i binarna 31 daja rzymskie 97
+        assertEquals("b10110011", Dodawanie.add("romCXVI", "b111111")); // rzymska 66 i binarna 31 da poprawny binarny wynik
     }
     @Test
     public void testAdd108() { 
