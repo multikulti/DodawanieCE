@@ -103,9 +103,7 @@ public class Dodawanie {
             if(a.equals("h6A") && b.equals("hFF"))
                 return "169"; 
         }
-
-
-        }     
+    
 
         String aa = a;
         String bb = b;
@@ -129,8 +127,6 @@ public class Dodawanie {
         }
         if ((aa.contains(",") && count1 == 1) || (bb.contains(",") && count2 == 1)) {
         while (matcher1.find()) count1++;
-        Matcher matcher2 = pattern.matcher(bb);
-        int count2 = 0;
         while (matcher2.find()) count2++;
         if (aa.contains(".") || bb.contains("."))
                 {
@@ -169,13 +165,9 @@ public class Dodawanie {
             long bLong = Long.parseLong(b);
             long value = aLong + bLong;
             return Long.toString(value);
-              long bLong = Long.parseLong(b);
-              long value = (aLong+bLong)/10;
-              DecimalFormat f = new DecimalFormat("#");
-              String val = f.format(value);
-              System.out.println(val);
-              return val;
         }
+        }
+        
         if (aa.contains(",") || bb.contains(","))
         {
            a = a.replace(",", "");
