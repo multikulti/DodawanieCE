@@ -1,0 +1,9 @@
+language: java
+
+
+script: mvn test -B
+
+# safelist
+branches:
+  only:
+  - travis
